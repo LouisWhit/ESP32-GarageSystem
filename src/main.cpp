@@ -99,6 +99,7 @@ void loop(){
           digitalWrite(led, LOW);
           delay(100);
         }
+        webpage += "<script>setTimeout(function(){window.location.href='/';}, 3000);</script>";
     }
     webpage += "</body></html>";
     client.println(webpage);
